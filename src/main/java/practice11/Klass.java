@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Klass {
     private Integer number;
-    private Student leader;
+    private int leader = -1;
     private List<Student> member;
     private List<Observer> observers;
 
@@ -36,15 +36,15 @@ public class Klass {
     }
 
     public Student getLeader() {
-        return leader;
+        if (this.member.size() == 0 || this.leader < 0) return new Student(-1, "It's not a student", -1, this);
+        return this.member.get(leader);
     }
 
     public void assignLeader(Student student) {
         if (!member.contains(student)) {
-            this.leader = new Student(-1, "It's not a student", -1, this);
             System.out.println("It is not one of us.");
         } else {
-            this.leader = student;
+            this.leader = member.indexOf(student);
             this.observers.forEach(observer -> observer.notifyLeaderJoin(this, student));
         }
     }
