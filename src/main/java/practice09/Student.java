@@ -2,14 +2,14 @@ package practice09;
 
 public class Student extends Person {
 
-    private Klass klass;
+    private BasicKlass klass;
 
     public Student(int id, String name, int age, Klass klass) {
         super(id, name, age);
         this.klass = klass;
     }
 
-    public Klass getKlass() {
+    public BasicKlass getKlass() {
         return klass;
     }
 

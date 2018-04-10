@@ -1,7 +1,6 @@
 package practice08;
 
-public class Klass {
-
+public class Klass implements BasicKlass {
     private Integer number;
     private Student leader;
 
@@ -17,7 +16,7 @@ public class Klass {
         return String.format("Class %s", this.number);
     }
 
-    public boolean isSameClassOf(Klass klass) {
+    public boolean isSameClassOf(BasicKlass klass) {
         return this.number.equals(klass.getNumber());
     }
 

@@ -2,7 +2,7 @@ package practice08;
 
 public class Teacher extends Person {
 
-    private Klass klass;
+    private BasicKlass klass;
 
     public Teacher(int id, String name, int age, Klass klass) {
         super(id, name, age);
@@ -13,7 +13,7 @@ public class Teacher extends Person {
         super(id, name, age);
     }
 
-    public Klass getKlass() {
+    public BasicKlass getKlass() {
         return klass;
     }
 

@@ -2,21 +2,16 @@ package practice11;
 
 public class Student extends Person {
 
+    private BasicKlass klass;
 
-    private Klass klass;
-
-    public Student(int id, String name, int age, Klass klass) {
+    public Student(int id, String name, int age, BasicKlass klass) {
         super(id, name, age);
         this.klass = klass;
         klass.appendMember(this);
     }
 
-    public Klass getKlass() {
+    public BasicKlass getKlass() {
         return klass;
-    }
-
-    public void setKlass(Klass klass) {
-        this.klass = klass;
     }
 
     @Override

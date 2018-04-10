@@ -3,7 +3,7 @@ package practice11;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Klass {
+public class Klass implements BasicKlass {
     private Integer number;
     private int leader = -1;
     private List<Student> member;
