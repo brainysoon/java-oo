@@ -52,7 +52,7 @@ public class Teacher extends Person implements Observer {
 
     public boolean isTeaching(Student student) {
         return this.classes.stream()
-                .anyMatch(klass -> klass.isIn(student));
+                .anyMatch(klass -> klass.getNumber().equals(student.getKlass().getNumber()));
     }
 
     private String classesDisplayName() {
